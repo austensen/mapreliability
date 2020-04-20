@@ -15,11 +15,31 @@
 #' @import rlang
 #' @importFrom magrittr `%>%`
 #'
+#' @examples
+#' \dontrun{
+#' bk_hh_income <- tidycensus::get_acs(
+#'   geography = "tract",
+#'   state = "NY",
+#'   county = "Kings",
+#'   year = 2018,
+#'   survey = "acs5",
+#'   variables = "B19013_001", # Median Household Income
+#'   key = Sys.getenv("CENSUS_API")
+#' )
+#'
+#' reliability_table_equal(bk_hh_income, estimate, moe, 4)
+#'
+#' reliability_table_quant(bk_hh_income, estimate, moe, 4)
+#'
+#' reliability_table_custom(bk_hh_income, estimate, moe, c(0, 40000, 80000))
+#'
+#' }
+#'
 #' @name reliability_table
 NULL
 
-#' @export
 #' @rdname reliability_table
+#' @export
 reliability_table_equal <- function(data, est, moe, n_classes, conf_level = 0.90, quiet = FALSE) {
 
   data <- prep_input_data(data, as_label(enquo(est)), as_label(enquo(moe)), quiet = quiet)

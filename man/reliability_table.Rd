@@ -5,7 +5,7 @@
 \alias{reliability_table_equal}
 \alias{reliability_table_quant}
 \alias{reliability_table_custom}
-\title{Classification reliabililty table}
+\title{Classification reliability tables}
 \usage{
 reliability_table_equal(
   data,
@@ -43,7 +43,7 @@ reliability_table_custom(
 
 \item{n_classes}{Number of classes}
 
-\item{conf_level}{Confidence level used for MOEs (default = 90\%)}
+\item{conf_level}{Confidence level used for MOEs (default = 90\\%)}
 
 \item{quiet}{Whether to raise warnings about dropped observations with
 missing data}
@@ -53,4 +53,25 @@ missing data}
 \description{
 Get a table of reliability results for a classification of a set of
 estimates.
+}
+\examples{
+\dontrun{
+bk_hh_income <- tidycensus::get_acs(
+  geography = "tract",
+  state = "NY",
+  county = "Kings",
+  year = 2018,
+  survey = "acs5",
+  variables = "B19013_001", # Median Household Income
+  key = Sys.getenv("CENSUS_API")
+)
+
+reliability_table_equal(bk_hh_income, estimate, moe, 4)
+
+reliability_table_quant(bk_hh_income, estimate, moe, 4)
+
+reliability_table_custom(bk_hh_income, estimate, moe, c(0, 40000, 80000))
+
+}
+
 }

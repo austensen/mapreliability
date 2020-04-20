@@ -18,13 +18,12 @@ reliability_calculator(
 
 \item{moe}{Margin of error column}
 
-\item{viewer}{Where to display the gadget: `"dialog"`, `"pane"` or
-`"browser"` (see [shiny::viewer()]).}
+\item{viewer}{Where to display the gadget: \code{"dialog"}, \code{"pane"} or
+\code{"browser"} (see \code{\link[shiny:viewer]{shiny::viewer()}}).}
 }
 \description{
-Takes a dataframe with estiamte and MOE columns and launches an interactive
-shiny app to explore the reliability of various classifications of the
-estimate values for mapping.
+Takes a dataframe with estimate and MOE columns and launches an RStudio addin
+to explore the reliability of various classifications of the estimate values for mapping.
 }
 \examples{
 \dontrun{
