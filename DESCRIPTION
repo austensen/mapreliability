@@ -1,12 +1,10 @@
 Package: mapreliability
-Type: Package
-Title: What the Package Does (Title Case)
+Title: Map Reliability Calculator
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors@R: person("Maxwell", "Austensen", email = "m.austensen@gmail.com", role = c("aut", "cre"))
+Description: A tool for assessing the statistical reliability of classifications used in mapping, 
+  adapted from NYC Department of City Planning's Excel-based Map Reliability Calculator.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
