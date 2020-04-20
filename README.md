@@ -7,7 +7,7 @@
 
 <!-- badges: end -->
 
-This package is a port of [Map Reliabilty
+This package is a port of the [Map Reliabilty
 Calculator](https://www1.nyc.gov/site/planning/data-maps/nyc-population/geographic-reference.page)
 Excel-based tool produced by New York City Department of City Planning’s
 Population Division.
@@ -215,4 +215,4 @@ nyc_hh_income %>%
   )
 ```
 
-<img src="/var/folders/l0/j66cgl4d2zq1fvvkx3tn2smh0000gn/T//Rtmpx9x7QB/file1df6659f7bf3.png" width="100%" />
+<img src="man/figures/README-example-map.png" width="100%" />

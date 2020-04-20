@@ -152,7 +152,6 @@ nyc_hh_income %>%
 ```
 
 ```{r map-image, echo=FALSE}
-f <- tempfile(fileext = ".png")
-ggsave(f, height = 6, width = 6)
-knitr::include_graphics(f)
+ggsave("man/figures/README-example-map.png", height = 6, width = 6)
+knitr::include_graphics("man/figures/README-example-map.png")
 ```
