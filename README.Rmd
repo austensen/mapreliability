@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # mapreliability
 
 <!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
 This package is a port of the [Map Reliabilty Calculator](https://www1.nyc.gov/site/planning/data-maps/nyc-population/geographic-reference.page) Excel-based tool produced by New York City Department of City Planning's Population Division.
