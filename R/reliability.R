@@ -8,7 +8,7 @@
 #' @param moe Margin of error column
 #' @param n_classes Number of classes
 #' @param class_breaks_low A vector of lower break points for a custom classification
-#' @param conf_level Confidence level used for MOEs (default = 90\%)
+#' @param conf_level Confidence level used for MOEs (default = 90%)
 #' @param quiet Whether to raise warnings about dropped observations with
 #'   missing data
 #'

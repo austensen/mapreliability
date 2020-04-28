@@ -43,7 +43,7 @@ reliability_table_custom(
 
 \item{n_classes}{Number of classes}
 
-\item{conf_level}{Confidence level used for MOEs (default = 90\\%)}
+\item{conf_level}{Confidence level used for MOEs (default = 90\%)}
 
 \item{quiet}{Whether to raise warnings about dropped observations with
 missing data}
