@@ -1,6 +1,6 @@
 #' Map reliability calculator
 #'
-#' Takes a dataframe with estimate and MOE columns and launches an RStudio addin 
+#' Takes a dataframe with estimate and MOE columns and launches an RStudio addin
 #' to explore the reliability of various classifications of the estimate values for mapping.
 #'
 #' @param data Dataframe
@@ -133,6 +133,7 @@ reliability_calculator <- function(data, est, moe, viewer = getOption(x = "mapre
 
     formatted_data <- selected_data %>%
       breaks_fun(est, moe, ..., quiet = TRUE) %>%
+      dplyr::mutate(class_breaks = as.character(class_breaks)) %>%
       tibble::add_row(
         class_breaks = "TOTAL",
         count = .[["tot_count"]][[1]],
